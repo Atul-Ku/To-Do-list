@@ -1,0 +1,38 @@
+<%- include("header") -%>
+
+<body>
+
+    <!-- use of control flow tag. -->
+    <!-- <%if(listtitle==="Sunday" || listtitle==="Saturday"){ %>
+        <h1 style="color: green;"><%= listtitle %> to do list</h1>
+    <%}else{%>
+        <h1 style="color: blue;"><%= listtitle %> to do list</h1>
+    <%}%> -->
+
+    <p style="padding: 10px; padding-bottom: 5px;">
+        <h2>To-Do list</h2>
+    </p>
+
+    <div class="box" id="heading">
+        <h1><%= listtitle %></h1>
+    </div>
+
+    <div class="box">
+        <% for(var i=0;i<newlistItems.length;++i){ %>
+        <div class="item">
+            <input type="checkbox">
+            <p contenteditable="true"><%= newlistItems[i] %></p>
+        </div>
+        <% } %>
+
+        <form class="item" action="/" method="post">
+            <button type="submit" name="list2" value="<%= listtitle %>">-</button>
+            <input type="text" name="Newitem" placeholder="New-Item" autocomplete="off">
+            <button type="submit" name="list" value="<%= listtitle %>">+</button>
+        </form>
+    </div>
+</body>
+
+<%- include("footer") -%>
+
+</html>
