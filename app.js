@@ -12,10 +12,9 @@ app.set('view engine', 'ejs');
 let items= ["Buy food","Cook food","Eat food"];
 let Work= [];
 
-
-    let options = { weekday: 'long', month: 'long', day: 'numeric' };
-    const today = new Date();
-    let day=today.toLocaleDateString("en-US",options);
+let options = { weekday: 'long', month: 'long', day: 'numeric' };
+const today = new Date();
+let day=today.toLocaleDateString("en-US",options);
 
 app.get("/", function (req, res) {
     // const a=3+5;
