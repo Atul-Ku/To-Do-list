@@ -62,7 +62,7 @@ p {
   color: #00204a;
 }
 
-form {
+form.item {
   text-align: center;
   margin-left: 15px;
   margin-right: 10px;
